@@ -33,6 +33,9 @@
 </head>
 
 <body class="bg-black overflow-x-hidden max-2xl:overflow-x-hidden font-[poppins]">
+<div class="hidden place-content-center h-screen max-[769px]:grid">
+    <div class="text-xl font-semibold">Nothing To See Here. <br>Go To Desktop Mode.</div>
+</div>
 <!-- Full Navbar -->
 <div class="full-nav fixed grid grid-cols-2 overflow-hidden">
     <div class="m-16">
@@ -56,13 +59,13 @@
             <h3 class="text-4xl font-bold hover:ml-2 inline transition-all"><span class="white-stock">NFT</span>VAULT</h3>
         </div>
     </div>
-    <div class="">
-        <img class="w-2/3" src="images/avatar.png" alt="">
+    <div>
+        <img class="w-2/3 nav-img" src="images/avatar.png" alt="">
     </div>
 </div>
-<div class="">
+<div class="max-lg:hidden">
     <!--Side-NavBar-->
-    <div class="fixed z-10 grid bg-black h-screen w-16 grid-rows-3 border-r">
+    <div class="fixed z-10 grid bg-black h-screen w-16 grid-rows-3 border-r max-sm:hidden max-sm:w-0">
         <div class="grid content-start">
             <img class="mx-2 mt-2 w-12" src="images/logo/Union.svg" alt=""/>
         </div>
@@ -88,7 +91,7 @@
         </div>
     </div>
     <!-- Main Container -->
-    <div class="main-container ml-16 h-screen">
+    <div class="main-container ml-16 h-screen max-sm:ml-0">
         <!--Top-Notifications-->
         <div class="fixed text-light fw-bold right-8 top-5 z-10">
             <div class="inline-block border rounded-3xl mx-4 px-3 py-2">
@@ -101,13 +104,9 @@
 
         <!--Main Section-->
         <div class="h-screen grid grid-cols-2">
-            <div class="pt-36 pl-16">
+            <div class="pt-36 pl-16 max-sm:col-span-2">
                 <b class="text-[150px] max-sm:text-5xl white-stock">SAMURAI</b><br>
-                <b class="text-5xl">IS A FUSION OF <br> BUSD REWARDS & NFTS.</b><br>
-                <div class="button-container mt-6">
-                    <span class="mas">DOWNLOAD WHITEPAPER &#129123;</span>
-                    <button type="button" name="Hover">DOWNLOAD WHITEPAPER &#129123;</button>
-                </div>
+                <b class="text-5xl max-sm:text-lg">IS A FUSION OF <br> BUSD REWARDS & NFTS.</b><br>
             </div>
             <div class="absolute right-0">
                 <img class="mt-9 w-[720px]" src="images/samurai-img.svg" alt="">
@@ -115,9 +114,9 @@
         </div>
         <hr>
         <!-- Play & Earn -->
-        <div class="h-32 my-10 grid content-center flex justify-center">
-            <b class="absolute justify-self-center opacity-50 text-9xl white-stock">PLAY & EARN</b>
-            <b class="text-6xl transition-all z-10 hover:scale-125 glow">PLAY & EARN</b>
+        <div class="h-32 my-10 grid content-center flex justify-center max-sm:h-10">
+            <b class="absolute justify-self-center opacity-50 text-9xl white-stock max-sm:text-4xl">PLAY & EARN</b>
+            <b class="text-6xl transition-all z-10 hover:scale-125 glow max-sm:text-xl">PLAY & EARN</b>
         </div>
         <div class="text-center">
             <b>Play our SAMURAI RUNNER game and win rewards.</b>
@@ -129,9 +128,9 @@
             </div> -->
         </div>
         <!-- Feature -->
-        <div class="h-32 my-10 grid content-center flex justify-center">
-            <b class="absolute justify-self-center opacity-50 text-9xl white-stock">FEATURE</b>
-            <b class="text-6xl transition-all z-10 hover:scale-125 glow">FEATURE</b>
+        <div class="h-32 my-10 grid content-center flex justify-center max-sm:h-10">
+            <b class="absolute justify-self-center opacity-50 text-9xl white-stock max-sm:text-4xl">FEATURE</b>
+            <b class="text-6xl transition-all z-10 hover:scale-125 glow max-sm:text-xl">FEATURE</b>
         </div>
         <div class="feature mx-16 grid grid-cols-2 px-5 mb-5">
             <div></div>
@@ -275,38 +274,38 @@
             <span><img class="h-7" src="images/aggregators/certik.svg" alt=""></span>
         </div>
         <!--VAULT Section-->
-        <div>
-            <div class="text-7xl text-center font-bold my-8"><span class="white-stock">NFT</span>VAULT</div>
-            <div class="flex justify-center h-[250px] my-10">
-                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] -ml-[730px] mt-[40px]"></div>
-                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] -ml-[590px] mt-[30px]"></div>
-                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] -ml-[425px] mt-[20px]"></div>
-                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] -ml-[240px] mt-[10px]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault1.jpg')] h-[250px] z-[5]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] ml-[240px] mt-[10px]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] ml-[425px] mt-[20px]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] ml-[590px] mt-[30px]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] ml-[730px] mt-[40px]"></div>
-            </div>
-            <p class="text-xl text-center py-5">8,888 NFTs of beautiful, Asian women painstakingly-crafted where even
-                the most<br>intricate
-                details are steeped in historical significance.</p>
-        </div>
+<!--        <div>-->
+<!--            <div class="text-7xl text-center font-bold my-8"><span class="white-stock">NFT</span>VAULT</div>-->
+<!--            <div class="flex justify-center h-[250px] my-10">-->
+<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] -ml-[730px] mt-[40px]"></div>-->
+<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] -ml-[590px] mt-[30px]"></div>-->
+<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] -ml-[425px] mt-[20px]"></div>-->
+<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] -ml-[240px] mt-[10px]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault1.jpg')] h-[250px] z-[5]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] ml-[240px] mt-[10px]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] ml-[425px] mt-[20px]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] ml-[590px] mt-[30px]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] ml-[730px] mt-[40px]"></div>-->
+<!--            </div>-->
+<!--            <p class="text-xl text-center py-5">8,888 NFTs of beautiful, Asian women painstakingly-crafted where even-->
+<!--                the most<br>intricate-->
+<!--                details are steeped in historical significance.</p>-->
+<!--        </div>-->
         <!-- What's New -->
-        <div>
-            <div class="text-7xl text-center font-bold my-8"><span class="white-stock">WHAT'S</span>NEW</div>
-            <div class="flex justify-center h-[250px] my-10">
-                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] -ml-[730px] mt-[40px]"></div>
-                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] -ml-[590px] mt-[30px]"></div>
-                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] -ml-[425px] mt-[20px]"></div>
-                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] -ml-[240px] mt-[10px]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault1.jpg')] h-[250px] z-[5]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] ml-[240px] mt-[10px]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] ml-[425px] mt-[20px]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] ml-[590px] mt-[30px]"></div>
-                <div class="vault-item bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] ml-[730px] mt-[40px]"></div>
-            </div>
-        </div>
+<!--        <div>-->
+<!--            <div class="text-7xl text-center font-bold my-8"><span class="white-stock">WHAT'S</span>NEW</div>-->
+<!--            <div class="flex justify-center h-[250px] my-10">-->
+<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] -ml-[730px] mt-[40px]"></div>-->
+<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] -ml-[590px] mt-[30px]"></div>-->
+<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] -ml-[425px] mt-[20px]"></div>-->
+<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] -ml-[240px] mt-[10px]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault1.jpg')] h-[250px] z-[5]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] ml-[240px] mt-[10px]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] ml-[425px] mt-[20px]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] ml-[590px] mt-[30px]"></div>-->
+<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] ml-[730px] mt-[40px]"></div>-->
+<!--            </div>-->
+<!--        </div>-->
         <!-- How To Play Section -->
         <div class="h-32 my-10 grid content-center flex justify-center">
             <b class="absolute justify-self-center opacity-50 text-9xl white-stock">HOW TO PLAY</b>

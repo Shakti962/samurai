@@ -66,9 +66,16 @@ window.addEventListener('scroll', function (){
 // Side Navbar
 function navbar(){
     let nav = document.getElementsByClassName('full-nav')[0];
+    let navImage = document.getElementsByClassName("nav-img")[0];
     if (nav.style.width === "100%"){
-        nav.style.width = "0px"
+        navImage.classList.remove("nav-img-ani-forward");
+        navImage.classList.add("nav-img-ani-backward");
+        setTimeout(function (){
+            nav.style.width = "0px";
+        }, 700);
     }else{
         nav.style.width = "100%";
+        navImage.classList.add("nav-img-ani-forward");
+        navImage.classList.remove("nav-img-ani-backward");
     }
 }
