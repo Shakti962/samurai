@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	color: white;
+}
+.main-container{
+	width: calc(100vw - 59px);
+}
+.white-stock{
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px;
+}
+.button-container {
+	position: relative;
+	font-size: 20px;
+	transition: 0.5s;
+}
+.button-container button {
+	background-color: #DAA520FF;
+	font-weight: bold;
+	padding: 13px;
+	font-size: 12px;
+	border-radius: 23px;
+	-webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+	mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+	-webkit-mask-size: 2300% 100%;
+	mask-size: 2300% 100%;
+	color: #000;
+	cursor: pointer;
+	-webkit-animation: ani2 0.7s steps(22) forwards;
+	animation: ani2 0.7s steps(22) forwards;
+}
+.button-container button:hover {
+	-webkit-animation: ani 0.7s steps(22) forwards;
+	animation: ani 0.7s steps(22) forwards;
+}
+.mas {
+	position: absolute;
+	color: #fff;
+	font-weight: bold;
+	padding: 14px;
+	font-size: 12px;
+	text-align: center;
+	overflow: hidden;
+}
+
+@-webkit-keyframes ani {
+	from {
+		-webkit-mask-position: 0 0;
+		mask-position: 0 0;
+	}to {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}
+}
+@keyframes ani {
+	from {
+		-webkit-mask-position: 0 0;
+		mask-position: 0 0;
+	}to {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}
+}
+@-webkit-keyframes ani2 {
+	from {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}to {
+		-webkit-mask-position: 0 0;
+		mask-position: 0 0;
+	}
+}
+@keyframes ani2 {
+	from {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	}to {
+		-webkit-mask-position: 0 0;
+		mask-position: 0 0;
+	}
+}
+
+/*!*************NavBar*************!*/
+.full-nav{
+	height: 100vh;
+	background-color: black;
+	width: 0;
+	overflow-x: hidden;
+	top: 0;
+	left: 60px;
+	transition: 0.8s;
+	z-index: 15;
+}
+.toggler{
+	margin-top: 36vh;
+}
+.plate svg {
+	height: 60px;
+	width: 60px;
+	position: absolute;
+}
+.plate {
+	height: 60px;
+	width: 60px;
+}
+.burger {
+	filter: url(#gooeyness);
+}
+.x {
+	transform: scale(0);
+	transition: transform 400ms;
+}
+.line {
+	fill: none;
+	stroke: white;
+	stroke-width: 6px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	transform-origin: 50%;
+	transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+.x .line {
+	stroke-width: 5.5px;
+}
+/* First plate */
+.plate1 .line2 {
+	stroke-dasharray: 40 200;
+	stroke-dashoffset: 0;
+}
+.plate1 .line3 {
+	stroke-dasharray: 40 179;
+	stroke-dashoffset: 0;
+}
+.active .line {
+	transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+}
+.active.plate1 .line1 {
+	transform: scale(0, 1);
+	transition: transform 500ms 100ms;
+}
+.active.plate1 .line2 {
+	stroke-dasharray: 5px 200;
+	stroke-dashoffset: -164px;
+}
+.active.plate1 .line3 {
+	stroke-dasharray: 5px 179;
+	stroke-dashoffset: -142px;
+}
+.active .x {
+	transform: scale(1);
+	transition: transform 400ms 350ms;
+}
+.glow{
+	-webkit-text-fill-color: #fff;
+	transition: 0.5s;
+	-webkit-text-stroke: 0;
+	text-shadow: 0 0 30px #DDB030;
+}
+/*!*******************Features**************************!*/
+.feature div .row{
+	font-size: 50px;
+	font-weight: bold;
+	padding-left: 10px;
+	width: 40%;
+	height: 70px;
+	transition: 0.5s;
+	border-bottom: 1px solid #fff;
+}
+.feature div:hover .row{
+	width: 80%;
+}
+.feature div .col{
+	width: 70px;
+	border-right: 1px solid #fff;
+}
+.feature div .content{
+	margin: 70px 0 0 70px;
+	padding: 20px;
+}
+/*!*******************Road Map**********************!*/
+.roadmap{
+	background-image: url("../images/rm-background.svg");
+	background-position: center;
+}
+.roadmap-header span, .tokenomics-header span{
+	margin: 0 50px;
+	font-size: 80px;
+	font-weight: bold;
+}
+.roadmap-header span:nth-child(odd), .tokenomics-header span:nth-child(odd) {
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-color: white;
+	-webkit-text-stroke: 1px;
+}
+/*!*******************Tokenomics**********************!*/
+.tokenomics{
+	background-image: url("../images/tokenomics-bg.svg");
+}
+.tokenomics-details{
+	padding: 50px 100px;
+}
+.tokenomics-details div{
+	padding: 10px 30px;
+}
+.tokenomics-details div b{
+	font-size: 40px;
+}
+.tokenomics-details div hr{
+	height: 3px;
+}
+.tokenomics-text{
+	padding: 50px 10px !important;
+	font-weight: bold;
+}
+.tooltips {
+	position: relative;
+}
+.tooltip {
+	position: absolute;
+	font-weight: bold;
+	background-color: #ffffff50;
+	padding: 10px;
+	border-radius: 23px;
+}
+.tooltips :nth-child(1) {
+	left: 910px;
+	top: 50px;
+}
+.tooltips :nth-child(2) {
+	left: 1020px;
+	top: 260px;
+}
+.tooltips :nth-child(3) {
+	left: 1005px;
+	top: 430px;
+}
+.tooltips :nth-child(4) {
+	left: 880px;
+	top: 610px;
+}
+.tooltips :nth-child(5) {
+	left: 200px;
+	top: 500px;
+}
+.tooltips :nth-child(6) {
+	left: 230px;
+	top: 100px;
+}
+.tooltips :nth-child(7) {
+	left: 345px;
+	top: -10px;
+}
+.tooltips :nth-child(8) {
+	left: 360px;
+	top: -55px;
+}
+.tooltips :nth-child(9) {
+	left: 610px;
+	top: -55px;
+}
+@media screen and (max-width: 1024px) {
+	.tooltips :nth-child(1) {
+		left: 690px;
+		top: 50px;
+	}
+	.tooltips :nth-child(2) {
+		left: 755px;
+		top: 200px;
+	}
+	.tooltips :nth-child(3) {
+		left: 740px;
+		top: 330px;
+	}
+	.tooltips :nth-child(4) {
+		left: 670px;
+		top: 440px;
+	}
+	.tooltips :nth-child(5) {
+		left: 120px;
+		top: 380px;
+	}
+	.tooltips :nth-child(6) {
+		left: 120px;
+	}
+	.tooltips :nth-child(7) {
+		left: 195px;
+	}
+	.tooltips :nth-child(8) {
+		left: 230px;
+	}
+	.tooltips :nth-child(9) {
+		left: 460px;
+	}
+}
+/*!***************ScrollBar**************************!*/
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #DDB030C5;
+	border-radius: 10px;
+}
