@@ -122,7 +122,6 @@ body{
 .feature div .row{
 	font-size: 50px;
 	font-weight: bold;
-	padding-left: 10px;
 	width: 40%;
 	height: 70px;
 	transition: 0.5s;
@@ -144,11 +143,6 @@ body{
 	background-image: url("../images/rm-background.svg");
 	background-position: center;
 }
-.roadmap-header span, .tokenomics-header span{
-	margin: 0 50px;
-	font-size: 80px;
-	font-weight: bold;
-}
 .roadmap-header span:nth-child(odd), .tokenomics-header span:nth-child(odd) {
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-color: white;
@@ -158,115 +152,35 @@ body{
 .tokenomics{
 	background-image: url("../images/tokenomics-bg.svg");
 }
-.tokenomics-details{
-	padding: 50px 100px;
-}
-.tokenomics-details div{
-	padding: 10px 30px;
-}
-.tokenomics-details div b{
-	font-size: 40px;
-}
 .tokenomics-details div hr{
 	height: 3px;
 }
-.tokenomics-text{
-	padding: 50px 10px !important;
-	font-weight: bold;
-}
-.tooltips {
-	position: relative;
-}
-.tooltip {
-	position: absolute;
-	font-weight: bold;
-	background-color: #ffffff50;
-	padding: 10px;
-	border-radius: 23px;
-}
-.tooltips :nth-child(1) {
-	left: 910px;
-	top: 50px;
-}
-.tooltips :nth-child(2) {
-	left: 1020px;
-	top: 260px;
-}
-.tooltips :nth-child(3) {
-	left: 1005px;
-	top: 430px;
-}
-.tooltips :nth-child(4) {
-	left: 880px;
-	top: 610px;
-}
-.tooltips :nth-child(5) {
-	left: 200px;
-	top: 500px;
-}
-.tooltips :nth-child(6) {
-	left: 230px;
-	top: 100px;
-}
-.tooltips :nth-child(7) {
-	left: 345px;
-	top: -10px;
-}
-.tooltips :nth-child(8) {
-	left: 360px;
-	top: -55px;
-}
-.tooltips :nth-child(9) {
-	left: 610px;
-	top: -55px;
-}
 @media screen and (max-width: 1024px) {
-	.tooltips :nth-child(1) {
-		left: 690px;
-		top: 50px;
+	.main-container{
+		width: 100%;
 	}
-	.tooltips :nth-child(2) {
-		left: 755px;
-		top: 200px;
-	}
-	.tooltips :nth-child(3) {
-		left: 740px;
-		top: 330px;
-	}
-	.tooltips :nth-child(4) {
-		left: 670px;
-		top: 440px;
-	}
-	.tooltips :nth-child(5) {
-		left: 120px;
-		top: 380px;
-	}
-	.tooltips :nth-child(6) {
-		left: 120px;
-	}
-	.tooltips :nth-child(7) {
-		left: 195px;
-	}
-	.tooltips :nth-child(8) {
-		left: 230px;
-	}
-	.tooltips :nth-child(9) {
-		left: 460px;
+}
+/*!***************Design For Mobile**************************!*/
+@media screen and (max-width: 639px) {
+	.full-nav{
+		height: calc(100vh - 59px);
+		top: 60px;
+		left: 0;
 	}
 }
 /*!***************ScrollBar**************************!*/
 /* width */
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 0;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-	background: transparent;
-}
+/*::-webkit-scrollbar-track {*/
+/*	background: transparent;*/
+/*}*/
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-	background: #DDB030C5;
-	border-radius: 10px;
-}
+/*::-webkit-scrollbar-thumb {*/
+/*	background: #DDB030C5;*/
+/*	border-radius: 10px;*/
+/*}*/

@@ -21,21 +21,21 @@
     <style type="text/tailwindcss">
         @layer utilities {
             .vault-item {
-                @apply rounded-lg bg-no-repeat bg-cover bg-center w-[250px] inline-block absolute;
+                @apply rounded-lg bg-no-repeat bg-cover bg-center w-[250px] inline-block absolute max-sm:static max-sm:mx-[20vw] max-sm:w-[60vw];
             }
-
             .hr {
                 @apply border-[1px] opacity-50;
             }
         }
     </style>
     <title>Samurai</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo/favicon.svg">
 </head>
 
 <body class="bg-black overflow-x-hidden max-2xl:overflow-x-hidden font-[poppins]">
-<div class="hidden place-content-center h-screen max-[769px]:grid">
-    <div class="text-xl font-semibold">Nothing To See Here. <br>Go To Desktop Mode.</div>
-</div>
+<!--<div class="hidden place-content-center h-screen max-[769px]:grid">-->
+<!--    <div class="text-xl font-semibold">Nothing To See Here. <br>Go To Desktop Mode.</div>-->
+<!--</div>-->
 <!-- Full Navbar -->
 <div class="full-nav fixed grid grid-cols-2 overflow-hidden">
     <div class="m-16">
@@ -60,16 +60,16 @@
         </div>
     </div>
     <div>
-        <img class="w-2/3 nav-img" src="images/avatar.png" alt="">
+        <img class="w-2/3 nav-img max-sm:hidden" src="images/avatar.png" alt="">
     </div>
 </div>
-<div class="max-lg:hidden">
+<div class="">
     <!--Side-NavBar-->
-    <div class="fixed z-10 grid bg-black h-screen w-16 grid-rows-3 border-r max-sm:hidden max-sm:w-0">
-        <div class="grid content-start">
+    <div class="fixed z-20 grid bg-black h-screen w-16 sm:grid-rows-3 sm:border-r max-sm:border-b max-sm:w-full max-sm:h-[60px] max-sm:grid-cols-3">
+        <div class="sm:grid sm:content-start max-sm:flex max-sm:justify-start mb-4">
             <img class="mx-2 mt-2 w-12" src="images/logo/Union.svg" alt=""/>
         </div>
-        <div class="grid content-center">
+        <div class="sm:grid sm:content-center max-sm:flex max-sm:justify-center">
             <div class="plate plate1" onclick="this.classList.toggle('active'); navbar()">
                 <svg class="burger" height="100" width="100" viewBox="0 0 100 100">
                     <path class="line line1" d="M 30,65 H 70"/>
@@ -84,41 +84,41 @@
                 </svg>
             </div>
         </div>
-        <div class="grid content-end mb-4">
+        <div class="sm:grid sm:content-end mb-4 max-sm:flex max-sm:justify-end">
             <div class="mx-4">
-                <img class="mt-5" src="images/share.svg" alt=""/>
+                <img class="mt-5 max-sm:mt-4" src="images/share.svg" alt=""/>
             </div>
         </div>
     </div>
     <!-- Main Container -->
     <div class="main-container ml-16 h-screen max-sm:ml-0">
         <!--Top-Notifications-->
-        <div class="fixed text-light fw-bold right-8 top-5 z-10">
-            <div class="inline-block border rounded-3xl mx-4 px-3 py-2">
-                <span><img class="w-6 mr-2 inline" src="images/swap.svg" alt=""> PANCAKE SWAP</span>
+        <div class="fixed text-light fw-bold right-8 sm:top-5 max-sm:bottom-5 z-20">
+            <div class="inline-block bg-stone-900 border rounded-3xl mx-4 px-3 py-2">
+                <span><img class="w-6 mr-2 max-sm:mx-4 inline" src="images/swap.svg" alt=""><span class="max-sm:hidden"> PANCAKE SWAP</span></span>
             </div>
-            <div class="inline-block border rounded-3xl mx-4 px-3 py-2">
-                <span><img class="mr-2 inline" src="images/chat.svg" alt=""> LIVE CHAT</span>
+            <div class="inline-block bg-stone-900 border rounded-3xl mx-4 px-3 py-2">
+                <span><img class="mr-2 max-sm:mx-4 inline" src="images/chat.svg" alt=""><span class="max-sm:hidden"> LIVE CHAT</span></span>
             </div>
         </div>
 
         <!--Main Section-->
         <div class="h-screen grid grid-cols-2">
-            <div class="pt-36 pl-16 max-sm:col-span-2">
-                <b class="text-[150px] max-sm:text-5xl white-stock">SAMURAI</b><br>
+            <div class="pt-36 pl-16 max-sm:col-span-2 max-sm:text-center max-sm:pl-0 max-sm:pt-20">
+                <b class="text-[150px] max-sm:text-5xl max-lg:text-9xl white-stock">SAMURAI</b><br>
                 <b class="text-5xl max-sm:text-lg">IS A FUSION OF <br> BUSD REWARDS & NFTS.</b><br>
             </div>
-            <div class="absolute right-0">
-                <img class="mt-9 w-[720px]" src="images/samurai-img.svg" alt="">
+            <div class="absolute right-0 max-sm:top-64">
+                <img class="mt-9 w-[720px] max-lg:w-[500px]" src="images/samurai-img.svg" alt="">
             </div>
         </div>
         <hr>
         <!-- Play & Earn -->
-        <div class="h-32 my-10 grid content-center flex justify-center max-sm:h-10">
-            <b class="absolute justify-self-center opacity-50 text-9xl white-stock max-sm:text-4xl">PLAY & EARN</b>
-            <b class="text-6xl transition-all z-10 hover:scale-125 glow max-sm:text-xl">PLAY & EARN</b>
+        <div class="h-32 my-10 grid content-center flex justify-center max-lg:h-16 max-sm:h-10">
+            <b class="absolute justify-self-center opacity-50 text-9xl white-stock max-lg:text-6xl max-sm:text-4xl">PLAY & EARN</b>
+            <b class="text-6xl transition-all z-10 hover:scale-125 glow max-lg:text-3xl max-sm:text-xl">PLAY & EARN</b>
         </div>
-        <div class="text-center">
+        <div class="text-center max-sm:px-4">
             <b>Play our SAMURAI RUNNER game and win rewards.</b>
             <p>Every week top 3 players on the game leaderboard will share an exciting prize pool.</p>
             <img class="w-[50%] mx-auto" src="images/soon.gif" alt=""><br>
@@ -128,14 +128,14 @@
             </div> -->
         </div>
         <!-- Feature -->
-        <div class="h-32 my-10 grid content-center flex justify-center max-sm:h-10">
-            <b class="absolute justify-self-center opacity-50 text-9xl white-stock max-sm:text-4xl">FEATURE</b>
-            <b class="text-6xl transition-all z-10 hover:scale-125 glow max-sm:text-xl">FEATURE</b>
+        <div class="h-32 my-10 grid content-center flex justify-center max-lg:h-16 max-sm:h-10">
+            <b class="absolute justify-self-center opacity-50 text-9xl white-stock max-lg:text-6xl max-sm:text-4xl">FEATURE</b>
+            <b class="text-6xl transition-all z-10 hover:scale-125 glow max-lg:text-3xl max-sm:text-xl">FEATURE</b>
         </div>
-        <div class="feature mx-16 grid grid-cols-2 px-5 mb-5">
+        <div class="feature mx-16 grid grid-cols-2 px-5 mb-5 max-sm:grid-cols-1 max-sm:mx-0">
             <div></div>
             <div class="relative">
-                <div class="absolute row white-stock">01</div>
+                <div class="absolute row pl-2 white-stock">01</div>
                 <div class="absolute h-full col"></div>
                 <div class="content">
                     <h4>8% Redistribution In BUSD</h4>
@@ -155,13 +155,13 @@
         </div>
         <!-- Road Map -->
         <div class="roadmap overflow-x-hidden">
-            <div class="roadmap-header font-bold my-10 text-8xl space-x-24 transition-all">
+            <div class="roadmap-header font-bold my-10 text-7xl space-x-24 transition-all max-sm:text-4xl">
                 <span>SAMURAI</span><span>ROADMAP</span><span>SAMURAI</span><span>ROADMAP</span><span>SAMURAI</span><span>ROADMAP</span><span>SAMURAI</span><span>ROADMAP</span><span>SAMURAI</span>
             </div>
-            <div class="mx-16 space-y-16">
+            <div class="mx-16 space-y-16 max-sm:mx-4">
                 <div class="py-3 grid grid-cols-2">
                     <div class="">
-                        <img class="w-3/4" src="images/rm-q1.svg" alt="">
+                        <img class="w-3/4 max-sm:hidden" src="images/rm-q1.svg" alt="">
                     </div>
                     <div class="space-y-4 grid place-content-end">
                         <p><b>Private sale round</b></p>
@@ -192,12 +192,12 @@
                         <hr class="hr w-96">
                     </div>
                     <div class="flex justify-end">
-                        <img class="w-3/4" src="images/rm-q2.svg" alt="">
+                        <img class="w-3/4 max-sm:hidden" src="images/rm-q2.svg" alt="">
                     </div>
                 </div>
                 <div class="roadmap-details grid grid-cols-2">
                     <div class="">
-                        <img class="w-3/4" src="images/rm-q3.svg" alt="">
+                        <img class="w-3/4 max-sm:hidden" src="images/rm-q3.svg" alt="">
                     </div>
                     <div class="space-y-4 grid place-content-end">
                         <p><b>Farming goes live on Moontography</b></p>
@@ -215,104 +215,90 @@
             </div>
         </div>
         <!--Tokenomics-->
-        <div class="tokenomics py-5 overflow-x-hidden">
-            <div class="tokenomics-header transition-all">
-                <span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span>
+        <div class="tokenomics py-5 overflow-hidden">
+            <div class="tokenomics-header font-bold my-10 text-7xl space-x-24 transition-all max-sm:text-4xl">
+                <span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span><span>TOKENOMICS</span>
             </div>
-            <div class="tokenomics-details p-16 text-4xl grid grid-cols-10">
-                <div class="col-span-2 mb-10">
+            <div class="tokenomics-details p-16 text-4xl grid grid-cols-10 max-sm:grid-cols-4 max-sm:text-lg max-sm:p-4">
+                <div class="col-span-2 mb-10 max-sm:col-span-2 max-sm:mb-2">
                     <b>Ticker</b>
-                    <hr class="hr w-3/4 my-4">
+                    <hr class="hr w-3/4 my-4 max-sm:my-2">
                     <b class="white-stock">SAMURAI</b>
                 </div>
-                <div class="col-span-3 mb-10">
+                <div class="col-span-3 mb-10 max-sm:col-span-2 max-sm:mb-2">
                     <b>BLOCKCHAIN</b>
-                    <hr class="hr w-3/4 my-4">
+                    <hr class="hr w-3/4 my-4 max-sm:my-2">
                     <b class="white-stock">BEP 20</b>
                 </div>
-                <div class="col-span-3 mb-10">
+                <div class="col-span-3 mb-10 max-sm:col-span-2 max-sm:mb-2">
                     <b>Total Supply</b>
-                    <hr class="hr w-3/4 my-4">
+                    <hr class="hr w-3/4 my-4 max-sm:my-2">
                     <b class="white-stock">1,000,000,000</b>
                 </div>
-                <div class="col-span-2 mb-10">
+                <div class="col-span-2 mb-10 max-sm:col-span-2 max-sm:mb-2">
                     <b>Decimal</b>
-                    <hr class="hr w-3/4 my-4">
+                    <hr class="hr w-3/4 my-4 max-sm:my-2">
                     <b class="white-stock">18</b>
                 </div>
-                <div class="col-span-4">
+                <div class="col-span-4 max-sm:col-span-2">
                     <b>Transaction Taxes</b>
-                    <hr class="hr w-3/4 my-4">
+                    <hr class="hr w-3/4 my-4 max-sm:my-2">
                     <b class="white-stock">15%</b>
                 </div>
-                <div class="col-span-3 text-base font-semibold mt-5 tokenomics-text">
+                <div class="col-span-2 text-base font-semibold mt-5 max-sm:mt-0 max-sm:font-medium max-sm:text-sm">
                     <p>8% BUSD Rewards to Holders <br>
                         3.5% Marketing Wallet <br>
                         3.5% Liquidity Burn
                     </p>
                 </div>
             </div>
-            <div class="tooltips">
-                <span class="tooltip"></span>
-                <span class="tooltip"></span>
-                <span class="tooltip"></span>
-                <span class="tooltip"></span>
-                <span class="tooltip"></span>
-                <span class="tooltip"></span>
-                <span class="tooltip"></span>
-                <span class="tooltip"></span>
-                <span class="tooltip"></span>
-            </div>
             <canvas id="myChart"></canvas>
         </div>
         <!--AGGREGATORS Section-->
-        <div class="flex justify-around bg-white p-2">
+        <div class="sm:flex sm:justify-around max-sm:grid max-sm:grid-cols-2  bg-white p-2">
             <span class="text-[#DDB030]"><b class="align-middle">OUR AGGREGATORS</b></span>
-            <span><img class="h-7" src="images/aggregators/coin-gecko.svg" alt=""></span>
-            <span><img class="h-7" src="images/aggregators/logo-bscscan.svg" alt=""></span>
-            <span><img class="h-7" src="images/aggregators/CoinMarketCap.svg" alt=""></span>
-            <span><img class="h-7" src="images/aggregators/certik.svg" alt=""></span>
+            <span><img class="aggregators-ani h-7 hidden max-sm:grid" src="" alt=""></span>
+            <span><img class="h-7 max-sm:hidden" src="images/aggregators/aggregators-1.svg" alt=""></span>
+            <span><img class="h-7 max-sm:hidden" src="images/aggregators/aggregators-2.svg" alt=""></span>
+            <span><img class="h-7 max-sm:hidden" src="images/aggregators/aggregators-3.svg" alt=""></span>
+            <span><img class="h-7 max-sm:hidden" src="images/aggregators/aggregators-4.svg" alt=""></span>
         </div>
         <!--VAULT Section-->
-<!--        <div>-->
-<!--            <div class="text-7xl text-center font-bold my-8"><span class="white-stock">NFT</span>VAULT</div>-->
-<!--            <div class="flex justify-center h-[250px] my-10">-->
-<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] -ml-[730px] mt-[40px]"></div>-->
-<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] -ml-[590px] mt-[30px]"></div>-->
-<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] -ml-[425px] mt-[20px]"></div>-->
-<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] -ml-[240px] mt-[10px]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault1.jpg')] h-[250px] z-[5]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] ml-[240px] mt-[10px]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] ml-[425px] mt-[20px]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] ml-[590px] mt-[30px]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] ml-[730px] mt-[40px]"></div>-->
-<!--            </div>-->
-<!--            <p class="text-xl text-center py-5">8,888 NFTs of beautiful, Asian women painstakingly-crafted where even-->
-<!--                the most<br>intricate-->
-<!--                details are steeped in historical significance.</p>-->
-<!--        </div>-->
-        <!-- What's New -->
-<!--        <div>-->
-<!--            <div class="text-7xl text-center font-bold my-8"><span class="white-stock">WHAT'S</span>NEW</div>-->
-<!--            <div class="flex justify-center h-[250px] my-10">-->
-<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] -ml-[730px] mt-[40px]"></div>-->
-<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] -ml-[590px] mt-[30px]"></div>-->
-<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] -ml-[425px] mt-[20px]"></div>-->
-<!--                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] -ml-[240px] mt-[10px]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault1.jpg')] h-[250px] z-[5]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] ml-[240px] mt-[10px]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] ml-[425px] mt-[20px]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] ml-[590px] mt-[30px]"></div>-->
-<!--                <div class="vault-item bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] ml-[730px] mt-[40px]"></div>-->
-<!--            </div>-->
-<!--        </div>-->
-        <!-- How To Play Section -->
-        <div class="h-32 my-10 grid content-center flex justify-center">
-            <b class="absolute justify-self-center opacity-50 text-9xl white-stock">HOW TO PLAY</b>
-            <b class="text-6xl transition-all z-10 hover:scale-125 glow">HOW TO PLAY</b>
+        <div>
+            <div class="text-7xl text-center font-bold my-8 max-sm:text-4xl"><span class="white-stock">NFT</span>VAULT</div>
+            <div class="flex justify-center h-[250px] my-10 max-sm:hidden">
+                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] -ml-[730px] mt-[40px]"></div>
+                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] -ml-[590px] mt-[30px]"></div>
+                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] -ml-[425px] mt-[20px]"></div>
+                <div class="vault-item -scale-x-100 bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] -ml-[240px] mt-[10px]"></div>
+                <div class="vault-item bg-[url('./images/nftVault/nftVault1.jpg')] h-[250px] z-[5]"></div>
+                <div class="vault-item bg-[url('./images/nftVault/nftVault2.jpg')] h-[230px] z-[4] ml-[240px] mt-[10px]"></div>
+                <div class="vault-item bg-[url('./images/nftVault/nftVault3.jpg')] h-[210px] z-[3] ml-[425px] mt-[20px]"></div>
+                <div class="vault-item bg-[url('./images/nftVault/nftVault4.jpg')] h-[190px] z-[2] ml-[590px] mt-[30px]"></div>
+                <div class="vault-item bg-[url('./images/nftVault/nftVault5.jpg')] h-[170px] z-[1] ml-[730px] mt-[40px]"></div>
+            </div>
+            <div>
+                <div class="whitespace-nowrap my-10 overflow-x-hidden sm:hidden">
+                    <div class="auto-scroll-ani transition-all duration-300">
+                        <div class="vault-item bg-[url('./images/nftVault/nftVault1.jpg')] h-[250px]"></div>
+                        <div class="vault-item bg-[url('./images/nftVault/nftVault2.jpg')] h-[250px]"></div>
+                        <div class="vault-item bg-[url('./images/nftVault/nftVault3.jpg')] h-[250px]"></div>
+                        <div class="vault-item bg-[url('./images/nftVault/nftVault4.jpg')] h-[250px]"></div>
+                        <div class="vault-item bg-[url('./images/nftVault/nftVault5.jpg')] h-[250px]"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xl text-center py-5">8,888 NFTs of beautiful, Asian women painstakingly-crafted where even
+                the most<br>intricate
+                details are steeped in historical significance.</p>
         </div>
-        <div class="grid grid-cols-3 text-center m-16">
-            <div class="border mx-8 px-5 py-14 rounded-3xl flex justify-center">
+        <!-- How To Play Section -->
+        <div class="h-32 my-10 grid content-center flex justify-center max-sm:h-10">
+            <b class="absolute justify-self-center opacity-50 text-9xl white-stock max-lg:xl max-sm:text-4xl">HOW TO PLAY</b>
+            <b class="text-6xl transition-all z-10 hover:scale-125 glow max-lg:3xl max-sm:text-xl">HOW TO PLAY</b>
+        </div>
+        <div class="grid grid-cols-3 text-center m-16 max-sm:mx-0 max-sm:space-y-6">
+            <div class="border mx-8 px-5 py-14 rounded-3xl flex justify-center max-sm:col-span-3">
                 <div class="border inline rounded-full absolute text-3xl -mt-[88px] bg-black white-stock py-3 px-4">01</div>
                 <div>
                     <b class="font-medium text-xl">Download & Setup Metamask <br> or <br> Trust wallet</b>
@@ -321,7 +307,7 @@
                         (Click here for a step-by-step tutorial)</p>
                 </div>
             </div>
-            <div class="border mx-8 px-5 py-14 rounded-3xl flex justify-center">
+            <div class="border mx-8 px-5 py-14 rounded-3xl flex justify-center max-sm:col-span-3">
                 <div class="border inline rounded-full absolute text-3xl -mt-[88px] bg-black white-stock p-3">02</div>
                 <div>
                     <b class="font-medium text-xl">Download & Setup Metamask <br> or <br> Trust wallet</b>
@@ -330,7 +316,7 @@
                         according to network congestion.</p>
                 </div>
             </div>
-            <div class="border mx-8 px-5 py-14 rounded-3xl flex justify-center">
+            <div class="border mx-8 px-5 py-14 rounded-3xl flex justify-center max-sm:col-span-3">
                 <div class="border inline rounded-full absolute text-3xl -mt-[88px] bg-black white-stock p-3">03</div>
                 <div>
                     <b class="font-medium text-xl">Adding SAMURAI token <br>to <br> your wallet</b>
@@ -343,65 +329,17 @@
         </div>
         <!--  Footer  -->
         <div class="footer">
-            <div class="text-center text-xl">
+            <div class="text-center text-xl max-sm:text-lg">
                 <i class="fas fa-envelope mr-3"></i><span>E-mail: contact@samurai.xyz</span>
             </div>
-            <div class="text-center mx-20 my-4">
-                <p class="text-md">The Content shared on this website is for information purpose only and, thus, should not be considered as
+            <div class="text-center mx-20 my-4 max-sm:mx-4">
+                <p class="text-md max-sm:text-sm">The Content shared on this website is for information purpose only and, thus, should not be considered as
                     financial advice. Trading/Investing is risky, and you should never invest more than you can afford to
                     lose. Cryptocurrencies are risky. Never invest more than you can afford to lose. You alone assume the
                     sole responsibility of evaluating the merits and risks associated with the use of any information or
                     other Content on the Site before making any decisions based on such information or other Content.</p>
             </div>
         </div>
-    </div>
-    <!--Main Section-->
-    <div class="main-section overflow-hidden">
-        <!--    &lt;!&ndash; How To Play Section &ndash;&gt;-->
-        <!--    <div class="divider text-center"><b class="white-stock">How To Play<span>How To Play</span></b></div>-->
-        <!--    <div class="row my-5">-->
-        <!--        <div class="col-lg-3 card border text-center px-4">-->
-        <!--            <span class="white-stock fs-2 position-absolute border">01</span>-->
-        <!--            <div class="my-5">-->
-        <!--                <h5>Download & Setup Metamask<br>or<br>Trust wallet</h5>-->
-        <!--                <p>Download MetaMask (a crypto wallet in form of a browser extension) or TrustWallet (an app for your-->
-        <!--                    phone). After that you will have to add the Binance Smart Chain to your network-list. (Click here-->
-        <!--                    for a step-by-step tutorial)</p>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--        <div class="col-lg-3 card border text-center px-4 mx-5">-->
-        <!--            <span class="white-stock fs-2 position-absolute border">02</span>-->
-        <!--            <div class="my-5">-->
-        <!--                <h5>Download & Setup Metamask<br>or<br>Trust wallet</h5>-->
-        <!--                <p>Buy BNB on exchanges like Binance, Coinbase, or Kucoin. Transfer BNB to your Metamask or Trust-->
-        <!--                    wallet. Head over to Pancake swap and use the contract address to swap BNB for SAMURAI. Set slippage-->
-        <!--                    according to network congestion.</p>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--        <div class="col-lg-3 card border text-center px-4 mx-5">-->
-        <!--            <span class="white-stock fs-2 position-absolute border">03</span>-->
-        <!--            <div class="my-5">-->
-        <!--                <h5>Adding SAMURAI token to your wallet</h5>-->
-        <!--                <p>If you are unable to see SAMURAI tokens in your wallet after swapping, head over to the "Add Custom-->
-        <!--                    token" section in your wallet and add "0x44ACeACDA6a4d6e-->
-        <!--                    a664333563c9286c224A4F60f"-->
-        <!--                    Now you should be able to see your SAMURAI tokens.</p>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--    &lt;!&ndash;  Footer  &ndash;&gt;-->
-        <!--    <div class="footer">-->
-        <!--        <div class="text-center fs-3">-->
-        <!--            <i class="fas fa-envelope"></i><span> E-mail: contact@samuraidao.io</span>-->
-        <!--        </div>-->
-        <!--        <div class="text-center my-3 mx-5 px-5">-->
-        <!--            <p>The Content shared on this website is for information purpose only and, thus, should not be considered as-->
-        <!--                financial advice. Trading/Investing is risky and you should never invest more than you can afford to-->
-        <!--                lose. Cryptocurrencies are risky. Never invest more than you can afford to lose. You alone assume the-->
-        <!--                sole responsibility of evaluating the merits and risks associated with the use of any information or-->
-        <!--                other Content on the Site before making any decisions based on such information or other Content.</p>-->
-        <!--        </div>-->
-        <!--    </div>-->
     </div>
 </div>
 

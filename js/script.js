@@ -1,4 +1,3 @@
-var ctx = document.getElementById("sunPieChart");
 var xValues = ["NFT Community Vault", "Marketing Wallet", "Team Wallet", "Seed Sale Round", "Pre-Sale Round",
     "Dex Liquidity", "Pink Sale Easy Sen",
     "Community Incentives", "Advisars"
@@ -8,19 +7,6 @@ var barColors = ["#ff638450", "#36a2eb50", "#ffcd5650", "#ff638450", "#36a2eb50"
 var hoverColor = ["#ff6384", "#36a2eb", "#ffcd56", "#ff6384", "#36a2eb", "#ffcd56", "#ff6384", "#36a2eb", "#ffcd56"];
 new Chart("myChart", {
     type: "doughnut",
-    plugins: [{
-        afterDraw: chart => {
-            var ctx = chart.chart.ctx;
-            ctx.save();
-            var image = new Image();
-            image.src =
-                '#';
-            imageSize = 60;
-            ctx.drawImage(image, chart.chart.width / 2 - imageSize / 2, chart.chart.height / 2 - imageSize / 2,
-                imageSize, imageSize);
-            ctx.restore();
-        }
-    }],
     data: {
         labels: xValues,
         datasets: [{
@@ -30,33 +16,14 @@ new Chart("myChart", {
         }]
     },
     options: {
-        onHover: function (evt, elements) {
-            if (elements && elements.length) {
-                segment = elements[0];
-                this.chart.update();
-                selectedIndex = segment["_index"];
-                segment._model.outerRadius += 6;
-            } else {
-                if (segment) {
-                    segment._model.outerRadius -= 6;
-                }
-                segment = null;
-            }
-        },
         layout: {
             padding: 8
         },
         legend: {
             display: false
-        },
-        tooltips: {
-            enabled: false
         }
     }
 });
-for (let i = 0; i < xValues.length; i++) {
-    document.getElementsByClassName('tooltip')[i].textContent = xValues[i] + " " + yValues[i] + "%";
-}
 // Divider Animation
 window.addEventListener('scroll', function (){
     let value = window.scrollY;
@@ -79,3 +46,27 @@ function navbar(){
         navImage.classList.remove("nav-img-ani-backward");
     }
 }
+//Aggregators Animation
+let aggregatorsCount = 1;
+setInterval(function (){
+    if(aggregatorsCount <= 4){
+        document.getElementsByClassName('aggregators-ani')[0].setAttribute('src', 'images/aggregators/aggregators-' + aggregatorsCount + '.svg')
+        aggregatorsCount++;
+    }
+    if(aggregatorsCount === 5){
+        aggregatorsCount = 1;
+    }
+},2000)
+//NFTVault Animation
+let scrollMargin = window.getComputedStyle(document.getElementsByClassName('auto-scroll-ani')[0]).marginLeft.replace('px', '');
+let temp = scrollMargin;
+let scrollElement = document.getElementsByClassName('auto-scroll-ani')[0];
+setInterval(function (){
+    if(temp >= -400){
+        temp -= 101;
+        scrollElement.style.marginLeft = temp + 'vw';
+    }else{
+        temp = scrollMargin;
+        scrollElement.style.marginLeft = scrollMargin + 'vw';
+    }
+},2000)
